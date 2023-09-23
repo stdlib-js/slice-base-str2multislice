@@ -1,0 +1,4 @@
+// Copyright (c) 2023 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import l from"https://cdn.jsdelivr.net/gh/stdlib-js/string-base-trim@v0.1.0-esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-str2slice@esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs";var s=/\s*,\s*/,i=/^-?[0-9]+$/;function n(n){var r,u,m,d,f;if("MultiSlice("!==n.substring(0,"MultiSlice(".length))return null;if(")"!==n[m=n.length-1])return null;if(1===(m=(n=(n=l(n.substring("MultiSlice(".length,m))).split(s)).length)&&""===n[0])return new e;for(r=[],f=0;f<m;f++){if("S"===(d=n[f])[0]){if(d=n.slice(f,f+3).join(","),null===(u=t(d)))return null;f+=2}else if("null"===d)u=null;else{if(!i.test(d))return null;u=parseInt(d,10)}r.push(u)}return e.apply(null,r)}export{n as default};
+//# sourceMappingURL=index.mjs.map
