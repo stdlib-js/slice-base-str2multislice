@@ -164,6 +164,12 @@ s = str2multislice( 'MultiSlice(foo,bar)' );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/slice-base/str2slice`][@stdlib/slice/base/str2slice]</span><span class="delimiter">: </span><span class="description">parse a string-serialized Slice object.</span>
+
 </section>
 
 <!-- /.related -->
@@ -241,6 +247,12 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/slice-base-str2multislice/main/LICENSE
 
 [@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
+
+<!-- <related-links> -->
+
+[@stdlib/slice/base/str2slice]: https://github.com/stdlib-js/slice-base-str2slice
+
+<!-- </related-links> -->
 
 </section>
 
