@@ -45,32 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/slice-base-str2multislice
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var str2multislice = require( '@stdlib/slice-base-str2multislice' );
+str2multislice = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-str2multislice@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var str2multislice = require( 'path/to/vendor/umd/slice-base-str2multislice/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-str2multislice@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.str2multislice;
+})();
+</script>
 ```
 
 <a name="main"></a>
@@ -129,8 +135,13 @@ var s = str2multislice( 'MultiSlice(foo,bar)' );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var str2multislice = require( '@stdlib/slice-base-str2multislice' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-str2multislice@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var s = str2multislice( 'MultiSlice(null,null,null)' );
 var d = s.data;
@@ -146,6 +157,11 @@ d = s.data;
 
 s = str2multislice( 'MultiSlice(foo,bar)' );
 // returns null
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -246,11 +262,11 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/slice-base-str2multislice/main/LICENSE
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
+[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/slice/base/str2slice]: https://github.com/stdlib-js/slice-base-str2slice
+[@stdlib/slice/base/str2slice]: https://github.com/stdlib-js/slice-base-str2slice/tree/umd
 
 <!-- </related-links> -->
 
