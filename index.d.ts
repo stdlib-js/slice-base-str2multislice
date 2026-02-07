@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,16 +16,23 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { MultiSlice } from '@stdlib/types/slice';
 
 /**
-* Parse a string-serialized MultiSlice object.
+* Parses a string-serialized MultiSlice object.
 *
-* @module @stdlib/slice-base-str2multislice
+* ## Notes
+*
+* -   The function returns `null` if provided an invalid string.
+*
+* @param str - input string
+* @returns MultiSlice object (or null)
 *
 * @example
-* var str2multislice = require( '@stdlib/slice-base-str2multislice' );
-*
 * var s = str2multislice( 'MultiSlice(null,null,null)' );
 * // returns <MultiSlice>
 *
@@ -33,8 +40,6 @@
 * // returns [ null, null, null ]
 *
 * @example
-* var str2multislice = require( '@stdlib/slice-base-str2multislice' );
-*
 * var s = str2multislice( 'MultiSlice(10,Slice(0,10,1),null)' );
 * // returns <MultiSlice>
 *
@@ -42,17 +47,12 @@
 * // returns [ 10, <Slice>, null ]
 *
 * @example
-* var str2multislice = require( '@stdlib/slice-base-str2multislice' );
-*
 * var s = str2multislice( 'MultiSlice(foo,bar)' );
 * // returns null
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function str2multislice( str: string ): MultiSlice | null;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = str2multislice;
